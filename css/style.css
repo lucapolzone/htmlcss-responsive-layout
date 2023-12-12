@@ -240,3 +240,23 @@ nav li {
   text-align: center;
 }
 
+
+/* === ABOUT US === */
+
+/* debug */
+
+
+.col-70 {
+  width: 70%;
+  padding: 150px 0;
+  border: 2px dashed black;
+  text-align: center;
+}
+
+.col-30 {
+  width: 30%;
+  padding: 150px 0;
+  border: 2px dashed black;
+  text-align: center;
+}
+
