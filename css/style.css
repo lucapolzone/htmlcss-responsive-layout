@@ -8,40 +8,91 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
 }
 
+a {
+  display: inline-block;
+}
+
+a:link, 
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+section:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+
+img {
+  border: 2px dashed black;
+}
 
 /* === UTILS === */
 
 :root {
-  --element-spacing: 10px;
-  --card-bg-color: red;
-  --secondary-color: blue;
-}
-
-.element-container {
-  max-width: 1080px;
-  border-left: 3px dashed red;
-  border-right: 3px dashed red;
+  --element-spacing: 15px;
+  --negative-element-spacing: -15px;
+  --card-bg-color: #b5ddff; /* azzurro */
+  --secondary-color: #9792e4; /* viola */
 }
 
 .btn {
-
-}
-
-.text-center {
+  background-color: yellow;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 10px;
+  width: 120px;
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
 
-/* === HEADER === */
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.white-box {
+  padding: 10px;
+  background-color: white;
+  border-radius: var(--element-spacing);
+}
+
+
+/* Regole col-100 */
+
+.col-100 {
+  width: 100%;
+  text-align: center;
+}
+
+.col-100 img {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.col-100 h2 {
+  margin: 20px 0;
+}
+
+
+/* HEADER */
 
 header {
   background-color: #0084fd;
 }
 
 .wrapper-header {
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,11 +115,166 @@ nav li {
   margin: 0 10px;
 }
 
-/* === MAIN === */
+/* MAIN */
+
+/* grid */
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  border-left: 3px dashed red;
+  border-right: 3px dashed red;
+  padding-left: var(--element-spacing);
+  padding-right: var(--element-spacing);
+}
+
+.row {
+  margin-left: var(--negative-element-spacing);
+  margin-right: var(--negative-element-spacing);
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.col {
+  padding: var(--element-spacing);
+  width: calc(100% / 3);
+  /* border: 1px solid red; */
+}
 
 
+/* === APP PRESENTATION === */
+
+#app-presentation .col:first-child {
+  width: calc(100% / 3 * 2);
+}
+
+#app-presentation .card {
+  background-color: var(--card-bg-color);
+  height: 100%;
+  padding: var(--element-spacing);
+  border-radius: var(--element-spacing);
+}
+
+#app-presentation .card .row {
+  position: relative;
+}
+
+#app-presentation .card .row .col.flex-column {
+  width: 50%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#app-presentation .card .row .col.flex-column.col-right {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#app-presentation .card .row .col.flex-column.col-right img {
+  position: absolute;
+  bottom: var(--negative-element-spacing);
+}
+
+/* Questa regola eredita le proprietà di .col-100 */
+#app-presentation .card .col.col-100 {
+  width: inherit;
+}
+
+/* === STRATEGIC PLANNING === */
+
+#strategic-planning {
+  padding-bottom: 30px;
+}
+
+.strategic-planning-col {
+  width: 50%;
+  height: 520px;
+  justify-content: flex-end;
+  margin: var(--element-spacing) 0;
+}
+
+.strategic-planning-col img{
+  width: 200px
+}
+
+.strategic-planning-col.right img{
+  width: 150px
+}
+
+#strategic-planning .white-box{
+  width: 400px
+}
 
 
+/* === TESTIMONIALS === */
+
+#testimonials .col {
+  width: 100%;
+}
+
+#testimonials .card {
+  background-color: var(--secondary-color);
+  padding: 20px 0;
+  border-radius: var(--element-spacing);
+}
+
+#testimonials .card.testimonials-text {
+  border: 2px dashed black;
+  background-color: white;
+  border-radius: 0;
+  text-align: center;
+}
 
 
-/* === FOOTER === */
+/* === BENEFITS === */
+
+#benefits .card {
+  background-color: white;
+  padding: 50px 0;
+  border-radius: 20px;
+}
+
+.benefits-title {
+  padding: var(--element-spacing);
+  text-align: center;
+}
+
+
+/* === ABOUT US === */
+
+/* debug */
+
+
+.col-70 {
+  width: 70%;
+  padding: 150px 0;
+  border: 2px dashed black;
+  text-align: center;
+}
+
+.col-30 {
+  width: 30%;
+  padding: 150px 0;
+  border: 2px dashed black;
+  text-align: center;
+}
+
+/* === GET STARTED === */
+
+#get-started h2 {
+  text-align: center;
+}
+
+#get-started {
+  padding: 20px;
+  height: 200px;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 20px;
+  height: 200px;
+  background-color: #333333;
+}
