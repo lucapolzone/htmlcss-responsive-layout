@@ -260,3 +260,14 @@ nav li {
   text-align: center;
 }
 
+/* === GET STARTED === */
+
+#get-started h2 {
+  text-align: center;
+}
+
+#get-started {
+  padding: 20px;
+  height: 200px;
+}
+
