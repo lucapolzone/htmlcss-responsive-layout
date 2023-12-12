@@ -206,3 +206,25 @@ nav li {
   width: 400px
 }
 
+
+/* === TESTIMONIALS === */
+
+#testimonials .col {
+  width: 100%;
+}
+
+#testimonials .card {
+  background-color: var(--secondary-color);
+  padding: 20px 0;
+  border-radius: var(--element-spacing);
+}
+
+#testimonials .card.testimonials-text {
+  border: 2px dashed black;
+  background-color: white;
+  border-radius: 0;
+  text-align: center;
+}
+
+
+
