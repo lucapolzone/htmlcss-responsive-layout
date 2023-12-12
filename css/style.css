@@ -271,3 +271,10 @@ nav li {
   height: 200px;
 }
 
+/* FOOTER */
+
+footer {
+  padding: 20px;
+  height: 200px;
+  background-color: #333333;
+}
