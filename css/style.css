@@ -181,3 +181,28 @@ nav li {
   width: inherit;
 }
 
+/* === STRATEGIC PLANNING === */
+
+#strategic-planning {
+  padding-bottom: 30px;
+}
+
+.strategic-planning-col {
+  width: 50%;
+  height: 520px;
+  justify-content: flex-end;
+  margin: var(--element-spacing) 0;
+}
+
+.strategic-planning-col img{
+  width: 200px
+}
+
+.strategic-planning-col.right img{
+  width: 150px
+}
+
+#strategic-planning .white-box{
+  width: 400px
+}
+
