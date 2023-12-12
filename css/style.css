@@ -7,7 +7,8 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: var(--body-font-color);
   line-height: 1.5rem;
 }
 
@@ -18,15 +19,12 @@ a {
 a:link, 
 a:visited {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 section:nth-child(even) {
   background-color: var(--secondary-color);
-}
-
-img {
-  border: 2px dashed black;
+  color: white;
 }
 
 /* === UTILS === */
@@ -34,18 +32,39 @@ img {
 :root {
   --element-spacing: 15px;
   --negative-element-spacing: -15px;
-  --card-bg-color: #b5ddff; /* azzurro */
+  --body-font-color: #333333;
+  --primary-color: #0084fd; /* azzurro */
   --secondary-color: #9792e4; /* viola */
+  --card-bg-color: #b5ddff; /* azzurro chiaro */
 }
 
 .btn {
   background-color: yellow;
   padding: 10px 15px;
   margin: 5px 0;
-  border-radius: 10px;
-  width: 120px;
+  border-radius: 20px;
   text-align: center;
+  width: 220px;
 }
+
+.btn.primary {
+  background-color: var(--primary-color);
+  font-weight: bold;
+}
+
+.btn.secondary {
+  background-color: var(--secondary-color);
+  font-weight: bold;
+  width: 180px;
+}
+
+
+.btn.tertiary {
+  background-color: white;
+  width: 120px;
+  color: black;
+}
+
 
 .text-left {
   text-align: left;
@@ -65,6 +84,11 @@ img {
   padding: 10px;
   background-color: white;
   border-radius: var(--element-spacing);
+  color: var(--body-font-color);
+}
+
+.big-title {
+  font-size: 2rem;
 }
 
 
@@ -89,7 +113,9 @@ img {
 /* HEADER */
 
 header {
-  background-color: #0084fd;
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--element-spacing) 0;
 }
 
 .wrapper-header {
@@ -98,16 +124,8 @@ header {
   align-items: center;
 }
 
-.logo {
-  /* Debug */
-  width: 100px;
-  height: 50px;
-  border: 3px dashed black;
-}
-
 nav {
   height: fit-content;
-  border: 3px dashed black;
 }
 
 nav li {
@@ -116,6 +134,11 @@ nav li {
 }
 
 /* MAIN */
+
+/* main {
+  padding-top: var(--element-spacing);
+} */
+
 
 /* grid */
 
@@ -141,6 +164,14 @@ nav li {
   /* border: 1px solid red; */
 }
 
+.fa-solid {
+  font-size: 5rem;
+  color: var(--primary-color);
+}
+
+.fa-brands.fa-apple {
+  color: white;
+}
 
 /* === APP PRESENTATION === */
 
@@ -161,12 +192,9 @@ nav li {
 
 #app-presentation .card .row .col.flex-column {
   width: 50%;
-  flex-direction: column;
-  gap: 20px;
 }
 
 #app-presentation .card .row .col.flex-column.col-right {
-  flex-direction: column;
   justify-content: flex-end;
   align-items: center;
 }
@@ -179,6 +207,16 @@ nav li {
 /* Questa regola eredita le proprietà di .col-100 */
 #app-presentation .card .col.col-100 {
   width: inherit;
+}
+
+
+
+#app-presentation .card h2 {
+  color: var(--primary-color);
+}
+
+.demo-application-visual {
+  width: 220px;
 }
 
 /* === STRATEGIC PLANNING === */
@@ -195,7 +233,7 @@ nav li {
 }
 
 .strategic-planning-col img{
-  width: 200px
+  width: 350px
 }
 
 .strategic-planning-col.right img{
@@ -215,24 +253,43 @@ nav li {
 
 #testimonials .card {
   background-color: var(--secondary-color);
-  padding: 20px 0;
+  padding: 20px;
   border-radius: var(--element-spacing);
+  color: white;
 }
 
 #testimonials .card.testimonials-text {
-  border: 2px dashed black;
   background-color: white;
   border-radius: 0;
   text-align: center;
+  color: var(--body-font-color)
 }
+
+#testimonials .card.testimonials-text * {
+  padding: 1rem 0;
+}
+
+#testimonials .section-title {
+  color: var(--secondary-color);
+}
+
+#testimonials .card .row .col {
+  max-width: 80%;
+}
+
+#testimonials .card .row .col.testimonial-picture {
+  max-width: 20%;
+}  
+
 
 
 /* === BENEFITS === */
 
 #benefits .card {
   background-color: white;
-  padding: 50px 0;
+  padding: 10px;
   border-radius: 20px;
+  color: var(--body-font-color);
 }
 
 .benefits-title {
@@ -276,5 +333,13 @@ nav li {
 footer {
   padding: 20px;
   height: 200px;
-  background-color: #333333;
+  background-color: var(--body-font-color);
 }
+
+
+
+/*  ======
+
+    TABLET: 768px 
+
+    ====== */
