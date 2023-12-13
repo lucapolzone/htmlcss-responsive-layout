@@ -163,8 +163,8 @@ section#app-presentation {
 .container {
   max-width: 1080px;
   margin: 0 auto;
-  border-left: 3px dashed red;
-  border-right: 3px dashed red;
+  /* border-left: 3px dashed red;
+  border-right: 3px dashed red; */
   padding-left: var(--element-spacing);
   padding-right: var(--element-spacing);
 }
@@ -291,18 +291,18 @@ section#app-presentation {
   color: var(--secondary-color);
 }
 
-#testimonials .card .row .col {
-  max-width: 80%;
-}
-
 #testimonials .card .row .col.testimonial-picture {
-  max-width: 20%;
+  width: calc(100% / 4);
+  margin: 0 auto;
 }  
 
-.testimonial-picture {
-  margin: 0 auto;
+#testimonials .card .row .col.testimonial-picture img {
+  width: 100%;
 }
 
+#testimonials .card .row .col {
+  width: calc(100% / 4 * 3);
+}
 
 /* === BENEFITS === */
 
@@ -323,7 +323,7 @@ section#app-presentation {
 
 #about-us .card {
   padding: var(--element-spacing);
-  border: 2px dashed red;
+  /* border: 2px dashed red; */
   height: 100%;
 }
 
@@ -335,6 +335,9 @@ section#app-presentation {
   line-height: 2rem;
 }
 
+#about-us .testimonial-picture {
+  width: 100%;
+}
 
 /* debug */
 
@@ -347,7 +350,7 @@ section#app-presentation {
 }
 
 #get-started p {
-  width: 560px;
+  max-width: 560px;
   margin: 0 auto;
 }
 
@@ -386,6 +389,14 @@ a.footer-link:visited {
 /* TABLET: 768px */
 
 @media screen and (max-width: 768px) {
+  
+  header,
+  section,
+  footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
 
   header {
     height: 80px;
@@ -405,6 +416,8 @@ a.footer-link:visited {
     display: block;
   }
 
+
+
   #app-presentation .card .row .col.flex-column {
     width: 100%;
   }
@@ -422,6 +435,8 @@ a.footer-link:visited {
   #app-presentation .card {
     padding-bottom: 0;
   }
+
+
 
   #strategic-planning .container {
     display: block;
@@ -442,6 +457,19 @@ a.footer-link:visited {
     max-width: 100%;
   }
 
+
+
+  #testimonials .card .row .col.testimonial-picture {
+    width: calc(100% / 3);
+  }  
+  
+  
+  #testimonials .card .row .col {
+    width: calc(100% / 3 * 2);
+  }
+
+
+  
   #benefits .col {
     width: calc(100% / 2);
   }
@@ -453,6 +481,7 @@ a.footer-link:visited {
 /* MOBILE: 480px */
 
 @media screen and (max-width: 480px) {  
+ 
   .col {
     width: 100%;
   }
@@ -471,14 +500,29 @@ a.footer-link:visited {
     width: 100%;
   }
 
-  #about-us .col:first-child {
+
+  #testimonials .card .row .col.testimonial-picture {
+    width: 230px;
+    margin: 0 auto 1rem auto;
+    padding: 0;
+  } 
+
+  #testimonials .card .row .col {
     width: 100%;
   }
 
-  .testimonial-picture {
-    margin: 0;
+  
+  #about-us .col:first-child {
+    width: 100%;
+  }
+  
+  #about-us .card {
+    padding: 0;
   }
 
+  #about-us .testimonial-picture {
+    width: 200px;
+  }
 }
 
 
