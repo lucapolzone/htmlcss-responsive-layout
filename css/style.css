@@ -16,11 +16,7 @@ a {
   display: inline-block;
 }
 
-a:link {
-  text-decoration: none;
-  color: white;
-}
-
+a:link,
 a:visited {
   text-decoration: none;
   color: white;
@@ -35,7 +31,8 @@ img {
   display: block;
 }
 
-/* === UTILS === */
+
+/* === Custom props === */
 
 :root {
   --element-spacing: 15px;
@@ -45,6 +42,9 @@ img {
   --secondary-color: #9792e4; /* viola */
   --card-bg-color: #b5ddff; /* azzurro chiaro */
 }
+
+
+/* === UTILS === */
 
 .btn {
   background-color: yellow;
@@ -139,6 +139,12 @@ nav {
 nav li {
   display: inline;
   margin: 0 10px;
+}
+
+.fa-solid.fa-bars {
+  color: white;
+  font-size: 1.5rem;
+  display: none;
 }
 
 /* MAIN */
@@ -377,8 +383,83 @@ a.footer-link:visited {
 
 
 
-/*  ======
+/* TABLET: 768px */
 
-    TABLET: 768px 
+@media screen and (max-width: 768px) {
 
-    ====== */
+  header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  .wrapper-header {
+    width: 100%;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .fa-solid.fa-bars {
+    display: block;
+  }
+
+  #app-presentation .card .row .col.flex-column {
+    width: 100%;
+  }
+
+  #app-presentation .card .row .col.flex-column.col-right { 
+    display: block;
+    padding-top: 0;
+  }
+ 
+
+  #app-presentation .card .row .col.flex-column.col-right img {
+    position: relative;
+    left: 0;
+  }
+  
+  #app-presentation .card {
+    padding-bottom: 0;
+  }
+
+  #strategic-planning .container {
+    display: block;
+  }
+
+  .strategic-planning-col {
+    width: 100%;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .strategic-planning-col img,
+  .strategic-planning-col.right img {
+    width: auto;
+  }
+
+  #strategic-planning .white-box {
+    max-width: 100%;
+  }
+
+  #benefits .col {
+    width: calc(100% / 2);
+  }
+
+}
+
+
+
+
+/* MOBILE: 480px */
+
+/* Media query max-width 480px */
+
+/* @media screen and (max-width: 480px) {  
+  h1 {
+    font-size: 3rem;
+  }
+} */
+
+
