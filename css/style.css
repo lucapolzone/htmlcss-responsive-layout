@@ -417,7 +417,6 @@ a.footer-link:visited {
 
   #app-presentation .card .row .col.flex-column.col-right img {
     position: relative;
-    left: 0;
   }
   
   #app-presentation .card {
@@ -436,7 +435,7 @@ a.footer-link:visited {
 
   .strategic-planning-col img,
   .strategic-planning-col.right img {
-    width: auto;
+    width: 100%;
   }
 
   #strategic-planning .white-box {
@@ -451,15 +450,35 @@ a.footer-link:visited {
 
 
 
-
 /* MOBILE: 480px */
 
-/* Media query max-width 480px */
-
-/* @media screen and (max-width: 480px) {  
-  h1 {
-    font-size: 3rem;
+@media screen and (max-width: 480px) {  
+  .col {
+    width: 100%;
   }
-} */
+
+  #app-presentation .col:first-child {
+    width: 100%;
+  }
+
+  #app-presentation .btn.primary,
+  #app-presentation .card .row .col.flex-column.col-right img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #benefits .col {
+    width: 100%;
+  }
+
+  #about-us .col:first-child {
+    width: 100%;
+  }
+
+  .testimonial-picture {
+    margin: 0;
+  }
+
+}
 
 
