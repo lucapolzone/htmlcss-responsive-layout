@@ -271,7 +271,7 @@ section#app-presentation {
 
 #testimonials .card {
   background-color: var(--secondary-color);
-  padding: 20px;
+  padding: 30px;
   border-radius: var(--element-spacing);
   color: white;
 }
@@ -292,16 +292,25 @@ section#app-presentation {
 }
 
 #testimonials .card .row .col.testimonial-picture {
-  width: calc(100% / 4);
-  margin: 0 auto;
+  /* width: calc(100% / 6); */
+  width: 150px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  padding: 0;
 }  
 
 #testimonials .card .row .col.testimonial-picture img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
 }
 
 #testimonials .card .row .col {
-  width: calc(100% / 4 * 3);
+  /* width: calc(100% / 6* 5); */
+  width: 80%;
+  padding-left: 25px;
 }
 
 /* === BENEFITS === */
@@ -459,13 +468,13 @@ a.footer-link:visited {
 
 
 
-  #testimonials .card .row .col.testimonial-picture {
+  /* #testimonials .card .row .col.testimonial-picture {
     width: calc(100% / 3);
   }  
-  
+   */
   
   #testimonials .card .row .col {
-    width: calc(100% / 3 * 2);
+    width: 70%;
   }
 
 
